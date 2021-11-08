@@ -1,0 +1,106 @@
+
+/*notif centre*/
+
+#dgB_n {
+    left: 0;
+    transition: transform .1s ease-out;
+}
+
+#dgB_n h1 { 
+    background-color: #D4D4D2;
+    color: #1C1C1C;
+    border-radius: 5px;
+}
+
+.tle_Sp { /*tile - special case (for notif button*/
+    width: 35px;
+}
+
+#dgB_n.tle_Sp:hover {
+    transform: scale(1.1);
+}
+
+#ntf_zM { /*'No notifcations' message*/
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#ntf_M { /*notification message*/
+    width: 500px;
+    height: 50px;
+    left: 50%;
+    top: 25px;
+    position: absolute;
+    transform: translateX(-50%) translateY(-100px); /*hidden above*/
+    z-index: 1000;
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px #E4E4E4, -2px -2px 5px 1px #E4E4E4;
+    transition: transform .2s ease-out, .2s box-shadow ease-out;
+}
+
+.pr_Clr { /*priority colour indicator*/
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#ntf_Mc {
+    margin: 7.5px;
+    margin-left: 14px;
+    display: inline-block;
+}
+
+#ntf_Mp {
+    width: 400px;
+    height: 50px;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+#ntf_Mp p {
+    position: absolute;
+    font-size: 17px;
+    height: 1em;
+    margin: 16.5px 0;
+}
+
+.ntf_Ec_C { /*notif entry index container - priority colour*/
+    width: 70px;
+    height: 51px;
+    margin-top: 16px;
+}
+
+.ntf_Ec_C div {
+    margin-left: 17.5px;
+}
+
+.ntf_Ec_T { /*notif entry index container - time */
+    width: 70px;
+    height: 40px;
+}
+
+.ntf_Ec_T p, .ntf_Ec_M p {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.ntf_Ec_M {
+    width: 250px;
+    height: 40px;
+}
+
+.ntf_Ec_M p, .ntf_Ec_Mb p {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ntf_Ec_Mb {
+    width: 250px;
+    height: 51px;
+    margin-top: 16px;
+}

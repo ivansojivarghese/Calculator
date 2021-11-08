@@ -1,0 +1,89 @@
+
+/* styling for memory listings */
+
+#dgB_m { /*display bar tile - memory*/
+    right: 0;
+}
+
+.mgn {
+    width: 345px;
+    height: 100%;
+    margin: 0 22.5px;
+}
+
+.cls_stk { /*close icon stroke*/
+    height: 2.5px;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #FFF;
+}
+
+#mem_C p {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+    height: 20px;
+    width: 230px;
+}
+
+#mem_C p span {
+    height: 1em;
+    display: inline-block;
+}
+
+#mem_C h3 {
+    font-size: 50px;
+    margin-top: 12px;
+    padding-left: 20px;
+    height: 50px;
+    width: 230px;
+}
+
+#mem_C h3 span {
+    height: 50px;
+}
+
+.mem_E { /*memory entry*/
+    cursor: pointer;
+}
+
+.mem_Df { /*memory entry default*/
+    cursor: default;
+    opacity: .3; /*fade out*/
+}
+
+.mem_Df:hover {
+    background-color: initial;
+}
+
+.mem_E:hover .idx h3 { /*change both colors simultaneously*/
+    background-color: rgba(28, 28, 28, 0.925);
+}
+
+.tle_E .idx { /*memory form index container*/
+    height: 107px;
+    width: 70px;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+}
+
+#mem_C .mem_E .idx h3 {
+    margin-top: calc((107px - 70px) / 2);
+    text-align: center;
+    font-size: 60px;
+    height: 60px;
+    width: 70px;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #1C1C1C;
+    background-color: #D4D4D2;
+}
+
+.ct {
+    display: inline-block;
+    height: 107px;
+    width: 250px;
+}

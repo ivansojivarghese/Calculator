@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href="CSS/sty.css" rel="stylesheet" type="text/css">
+        <link href="CSS/sec.css" rel="stylesheet" type="text/css">
+        <link href="CSS/ntf.css" rel="stylesheet" type="text/css">
+        <link href="CSS/mem.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="cb">
+            <div id="cb_C">
+                <h1>Calibrating...</h1>
+                <h2 id="cbT"></h2>
+            </div>
+        </div>
+        <div id="ntf_M">
+            <div id="ntf_Mc" class="pr_Clr"></div>
+            <div id="ntf_Mp">
+                <p id="ntf_Mpt"></p>
+            </div>
+        </div>
+        <div id="fr">
+            <div id="ntf" class="tle_V" style="visibility: hidden;">
+                <div class="mgn">
+                    <div class="b_tp">
+                        <div id="ntf_B_cls" class="b_cls tle tleA" title="Close">
+                            <div class="cls_stk" style="transform: translate(-50%, -50%) rotate(45deg)"></div>
+                            <div class="cls_stk" style="transform: translate(-50%, -50%) rotate(-45deg)"></div>
+                        </div>
+                    </div>
+                    <div id="ntf_C" class="tle_C">
+                        <p id="ntf_zM">No Notifications!</p>
+                    </div>
+                </div>
+            </div>
+            <div id="mem" class="tle_V" style="visibility: hidden;">
+                <div class="mgn">
+                    <div class="b_tp">
+                        <div id="mem_B_cls" class="b_cls tle tleA" title="Close">
+                            <div class="cls_stk" style="transform: translate(-50%, -50%) rotate(45deg)"></div>
+                            <div class="cls_stk" style="transform: translate(-50%, -50%) rotate(-45deg)"></div>
+                        </div>
+                    </div>
+                    <div id="mem_C" class="tle_C"></div>
+                </div>
+            </div>
+            <div id="sc">
+                <div id="dgBa">
+                    <div class="b_tp">
+                        <div id="dgB_n" class="tle tleA tle_Sp" title="Notifications">
+                            <h1 id="dgB_nH">0</h1>
+                        </div>
+                        <div id="dgB_m" class="tle tleD" title="Memory">
+                            <h1>M</h1>
+                        </div>
+                    </div>
+                </div>
+                <h1 id="ansD" class="dg">
+                    <span id="ip"></span>
+                </h1>
+            </div>
+            <div id="bd">
+                <div class="rw">    
+                    <div class="btn g f_Btn bEn">
+                        <h2>C</h2>
+                    </div><div class="btn md g f_Btn bEn">
+                        <h2>(&nbsp;)</h2>
+                    </div><div class="btn g f_Btn bEn">
+                        <h2>%</h2>
+                    </div><div class="btn o_Btn">
+                        <h2>÷</h2>
+                    </div>
+                </div>
+                <div class="rw">    
+                    <div class="btn c_Btn bEn">
+                        <h2>7</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>8</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>9</h2>
+                    </div><div class="btn o_Btn">
+                        <h2>×</h2>
+                    </div>
+                </div>
+                <div class="rw">    
+                    <div class="btn c_Btn bEn">
+                        <h2>4</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>5</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>6</h2>
+                    </div><div class="btn o_Btn">
+                        <h2>-</h2>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="btn c_Btn bEn">
+                        <h2>1</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>2</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>3</h2>
+                    </div><div class="btn o_Btn">
+                        <h2>+</h2>
+                    </div>
+                </div>
+                <div class="rw">
+                    <div class="btn md c_Btn bEn" style="border-bottom-left-radius: 15px;">
+                        <h2>+/-</h2>
+                    </div><div class="btn c_Btn">
+                        <h2>0</h2>
+                    </div><div class="btn c_Btn bEn">
+                        <h2>.</h2>
+                    </div><div class="btn o_Btn bEn" style="border-bottom-right-radius: 15px;">
+                        <h2>=</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dev">
+            <div id="ic" title="Open DevInfo">
+                <div class="c">
+                    <p id="icCh"><</p>
+                </div><div class="c">
+                    <p>dev</p>
+                </div>
+            </div>
+            <div id="cn">
+                <div id="dev1">
+                    <h3>1 - Display output, Overflow & TOG (term-operator group) construction</h3>
+                    <h1 class="to">
+                        <span id="d1_1"></span>
+                    </h1>
+                    <h1 class="to">
+                        <span id="d1_2"></span>
+                    </h1>
+                    <h1 class="to">
+                        <span id="d1_3"></span>
+                    </h1>
+                    <h1 class="to">
+                        <span id="d1_3.1"></span>
+                    </h1>
+                    <div id="d1_4"></div>
+                </div>     
+                <div id="dev2">
+                    <h3>2 - Back-end equation processing (operator priorities)</h3>
+                    <div id="d2_1"></div> 
+                </div>
+            </div>
+        </div>
+        <script src="Files/dv.js"></script>
+        <script src="Files/dvF.js"></script>
+        <script src="Files/i_L.js"></script>
+        <script src="Files/msc_1.js"></script>
+        <script src="Files/msc_2.js"></script>
+        <script src="Files/msc_3.js"></script>
+        <script src="Files/msc_4.js"></script>
+        <script src="Files/msc_5.js"></script>
+        <script src="Files/msc_6.js"></script>
+        <script src="Files/msc_7.js"></script>
+        <script src="Files/msc_9.js"></script>
+        <script src="Files/fn.js"></script>
+        <script src="Files/mL.js"></script>
+        <script src="Files/ma.js"></script>
+        <script src="Files/mem.js"></script>
+        <script src="Files/ntf.js"></script>
+    </body>
+</html>

@@ -1,0 +1,260 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    user-select: none; /*disable text highlighting*/
+}
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 80px;
+    height: 1em;
+}
+
+h1.dg {
+    color: #FFF;
+    text-align: right;
+    width: 100%;
+    transition: transform .2s ease-out, opacity .2s ease-out;
+    position: relative;
+}
+
+h1.dg:nth-child(2) {
+    z-index: 10; /*hidden behind body*/
+}
+
+h1 span {
+    display: inline-block;
+    height: 1em;
+    font-size: 1em;
+}
+
+h1 span.memDx { /*display of memory indexes*/
+    padding: 0 5px;
+    background: #DC143C;
+    border-radius: 5px;
+    max-height: 80px;
+}
+
+h1.ov1 { /*input overflow 1 - refer to ms.js*/
+    font-size: 40px;
+    top: 40px;
+}
+
+h1.ov2 { /*input overflow 2 - refer to ms.js*/
+    height: 2em;
+    top: 0;
+}
+
+h2 {
+    font-size: 60px;
+    text-align: center;
+    margin: 9.5px 0 9.5px 0;
+    font-size: 72.5px;
+}
+
+h2#cbT { /*calibration time header*/
+    font-size: 50px;
+    margin: 20px 0 0 0;
+}
+
+#cb { /*calibration screen*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    z-index: 500; /*at the topmost layer*/
+}
+
+#cb_C { /*calibration container*/
+    position: absolute;
+    height: 150px; /*combined height of children inside*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#fr { /*calculator frame*/
+    width: 390px;
+    height: 650px;
+    background-color: #1C1C1C;
+    margin-top: calc((100vh - 650px) / 2); /*centralise to viewport - reference to max height/width*/
+    margin-left: calc((100vw - 390px) / 2);
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px 1px #E4E4E4, -2px -2px 5px 1px #E4E4E4;
+    transition: .2s box-shadow ease-out;
+}
+
+#fr:hover {
+    box-shadow: 4px 4px 10px 2px #E4E4E4, -4px -4px 10px 2px #E4E4E4;
+}
+
+#sc { /*calculator screen*/
+    z-index: auto;
+    height: 180px;
+    width: 345px;
+    margin: 0 22.5px 0 22.5px;
+}
+
+#dgBa { /*calculator display bar area*/
+    width: 100%;
+    height: 100px;
+}
+
+.b_tp {
+    width: 100%;
+    position: relative;
+    top: 13px;
+    height: 28px;
+}
+
+.tle {
+    width: 28px;
+    position: absolute;
+    border-radius: 4px;
+    height: 28px;
+}
+
+.tle_V { /*tile view*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.975);
+    position: absolute;
+    z-index: 100;
+    border-radius: 15px; 
+}
+
+.tle_C { /*tile content*/
+    width: calc(100% + 22.5px);
+    height: 565px;
+    top: 25px;
+    position: relative;
+    text-align: right;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #FFF;
+    scroll-behavior: smooth;
+}
+
+.tle_E { /*tile content entry*/
+    width: 327.5px;
+    height: 107px;
+    border-radius: 6px;
+    padding: 5px 30px 10px 5px;
+    margin-bottom: 10px;
+}
+
+.tle_E:hover {
+    background-color: #333;
+}
+
+.b_cls {
+    right: 0;
+}
+
+.tleA {
+    cursor: pointer;
+}
+
+.tleD { /*tile disabled*/
+    cursor: not-allowed;
+    opacity: .3;
+}
+
+.tleA:hover { /*hover for active tile*/
+    background-color: #333;
+}
+
+#dgBa h1 {
+    font-size: 20px;
+    color: #FFF;
+    line-height: 1em;
+    text-align: center;
+    padding: 4px 0;
+}
+
+#bd { /*calculator body*/
+    height: 455px;
+    width: 390px;
+    margin-top: 15px;
+    background-color: #1C1C1C; /*to allow for transitioning btwn. digital display values*/
+    z-index: 50;
+    position: absolute; /*to allow for z-indexing to work*/
+    border-radius: 15px;
+}
+
+.rw { /*calculator row*/
+    margin: 0;
+    width: 100%;
+    height: 91px;
+}
+
+.rw:first-child { /*first calculator row*/
+    margin-top: 0;
+}
+
+.btn.g {
+    background-color:#D4D4D2;
+    color: #1C1C1C;
+}
+
+.btn { /*calculator button*/
+    cursor: pointer;
+    display: inline-block;
+    background-color: #505050; /*color scheme follows iOS7> calculator palette*/
+    color: #FFF;
+    width: 97.5px;
+    height: 91px;
+    margin: 0;
+    transition: .1s opacity ease-out;
+}
+
+.btn:last-child { /*last button in every row*/
+    margin: 0;
+    background-color: #FF9500;
+}
+
+.btn.md { /*manual styling - unknown visual error*/
+    position: relative;
+    top: -28.8px;
+}
+
+.btn.md h2 { /*negative sign toggle button*/
+    font-size: 40px;
+    margin: 0;
+    position: relative;
+    top: 17px;
+    font-size: 50px;
+}
+
+.bEn:hover {
+    opacity: .7;
+}
+
+.bEn.c_Btn:active { /*character buttons*/
+    background-color: #303030;
+}
+
+.bEn.o_Btn:active { /*operator buttons*/
+    background-color: #D07A00;
+}
+
+.bEn.f_Btn:active { /*function buttons*/
+    background-color: #9C9C9C;
+}
+
+.bDis { /*button disable*/
+    opacity: .4;
+    cursor: not-allowed;
+}

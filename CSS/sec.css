@@ -1,0 +1,96 @@
+
+/*outside base (secondary) styling*/
+
+p {
+    padding: 0; /*reset to defaults*/
+    margin: 0;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#dev {
+    height: 647px; /*subtract 3px red border*/
+    position: absolute;
+    width: 800px;
+    top: 0;
+    margin-top: calc((100vh - 650px) / 2);
+    right: 0;
+    border-top: 3px solid #FF0000;
+    transform: translateX(720px);
+}
+
+#dev > div { /*div el. immediate children of #dev*/
+    position: absolute;
+    top: -1px; /* remove white negative space with red border*/
+    padding: 5px 0 0 5px;
+}
+
+#dev #ic { /*icon*/
+    left: 0;
+    cursor: pointer;
+    width: 75px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+#dev #ic:hover {
+    background-color: #F8F8F8;
+}
+
+#dev #cn { /*content area box*/
+    height: 642px; /*subtract red border and margin-top*/
+    left: 80px;
+    width: 720px; /*subtract with 80px icon width*/
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#dev #cn p { /*input TOG widths*/
+    font-size: 16px;
+    margin: 10px 0 0 10px;
+}
+
+#dev #ic p {
+    font-size: 25px;
+}
+
+#dev #ic .c:first-child p {
+    font-size: 21px;
+}
+
+#dev #ic .c {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+h1.to {
+    color: #1C1C1C;
+    text-align: left;
+    width: 700px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    background-color: #F0F0F0;
+    margin: 10px 0 0 10px;
+    height: 1.2em;
+    font-size: 40px;
+}
+
+#dev #dev1 #d1_4 { /*view the individual characters*/
+    height: 200px;
+    margin: 10px 0 0 10px;
+    overflow-y: scroll;
+    width: 700px;
+    scroll-behavior: smooth; /*smooth scroll*/
+}
+
+#dev #dev2 #d2_1 {
+    overflow-y: scroll;
+    height: 125px;
+    width: 700px;
+    margin: 10px 0 0 10px;
+}
